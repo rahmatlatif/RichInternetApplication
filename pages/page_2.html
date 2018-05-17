@@ -1,0 +1,75 @@
+<html>
+<head>
+<style>
+      #form {
+        text-align: center;
+        margin: auto;
+        width: 735px;
+       }
+          input[type=button] {
+	      width: 8%;
+	      margin: auto;
+          }
+</style>
+<script>
+/*function validateForm() {
+    var x = document.forms["register"]["name"].value;
+	var y = document.forms["register"]["email"].value;
+    if (x == "") {
+        alert("Name must be filled out");
+        return false;
+    }
+	    if (y == "") {
+        alert("Email must be filled out");
+        return false;
+    }
+}*/
+/*$.ajax({
+        type: "POST",
+        url: "http://127.0.0.1/m2ajaxcs/save.py",
+        data: {'name': name, 'email':email, 'course':course, 'comment':comment},
+        success: function(response){
+			$("#pagecontent").html(response);
+			console.log("There is a response");
+			$('#loading').css('visibility','hidden');
+		}		
+    });*/
+	
+function addInfo() {
+   $('#loading').css('visibility','visible');
+    var name = $('input[name=name]').val();
+    var email = $('input[name=email]').val();
+    var course = $('select[name=course]').val();
+    var comment = $('textarea[name=comment]').val();
+	console.log(name, email, course, comment);
+};
+</script>
+</head>
+
+<body>
+<div id="form">
+<h1>Student Registration Form</h1>
+<form name="register" onsubmit= "addInfo()" method="POST">
+<p>Name:</p> <input type="text" name="name" required />
+<br>
+<p>Email Address:</p> <input type="text" name="email" required />
+<br>
+<p>Course:</p><select name="course">
+  <option value="word">MS Word</option>
+  <option value="excel">MS Excel</option>
+  <option value="googledocs">Google Docs</option>
+  <option value="videoedit">Video Edit</option>
+  <option value="screencap">Screen Cap</option>
+  <option value="podcast">PodCast</option>
+</select> 
+<br>
+<p>Comments:</p>
+<textarea rows="4" cols="50" name="comment" form="usrform"></textarea>
+<br>
+<input type="submit" value="Submit">
+<button type="reset" value="Reset">Clear</button>
+</form>
+</div>
+
+</body>
+</html>

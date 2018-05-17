@@ -1,0 +1,43 @@
+<html>
+<head>
+<style>
+      #form {
+        text-align: center;
+        margin: auto;
+        width: 735px;
+       }
+          input[type=button] {
+	      width: 8%;
+	      margin: auto;
+          }
+</style>
+<script>
+
+</script>
+</head>
+
+<body>
+<div id="form">
+<h1>Student Registration Form</h1>
+<form action="FormProcess.py" method="POST">
+<p>First Name:</p> <input type="text" name="FirstName" required/>
+<br>
+<p>Last Name:</p> <input type="text" name="LastName" required/>
+<br>
+<p>Residential Address:</p> <input type="text" name="ResidentialAddress"/>
+<br>
+<p>Phone No:</p> <div class="number"><input type="number" pattern="^[0-9]" min="0" max="100000000000" title="Only numerical value of length not more than 11" /></div>
+<br>
+<p>Gender:</p>
+<input type="radio" name="gender" value="male"> <p>Male</p>
+<input type="radio" name="gender" value="female"> <p>Female</p>
+<br>
+<p>Course:</p>
+<br>
+<input type="button" button type="Submit" onclick="location.href='#page1';" value="Submit" />
+<button type="reset" value="Reset">Clear</button>
+</form>
+</div>
+
+</body>
+</html>

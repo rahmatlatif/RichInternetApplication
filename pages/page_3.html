@@ -1,0 +1,35 @@
+<style>
+      #map {
+        height: 400px;
+        width: 735px;
+        text-align: right;
+       }
+</style>
+
+ <div id="map"></div>
+<script>
+      function initMap() {
+        var lithan = {lat: 1.319681, lng: 103.892044};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 15,
+          center: lithan
+        });
+        var marker = new google.maps.Marker({
+          position: lithan,
+          map: map
+        });
+      }
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB1jY4V_slg-27cc8en9Peat-mgKKH-ZME&callback=initMap">
+    </script>
+
+<h4>ABC Learning Centre</h4>
+<br>
+11 Eunos Road 8,
+<br>
+#07-02 Lifelong Learning Institute,
+<br>
+Singapore 408601
+<br>
+Tel: +65 6324 9730
+
